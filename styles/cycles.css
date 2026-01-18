@@ -1,0 +1,78 @@
+/* =========================
+   CICLOS DO HUMAN
+========================= */
+.human-cycles {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+/* título */
+.human-cycles h1 {
+  text-align: center;
+  color: #e6c36a;
+  letter-spacing: 0.32em;
+  margin-bottom: 64px;
+}
+
+/* timeline vertical */
+.cycle {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.cycle-marker {
+  display: flex;
+  justify-content: center;
+}
+
+.cycle-marker::before {
+  content: "";
+  width: 2px;
+  background: rgba(230,195,106,0.4);
+}
+
+/* conteúdo */
+.cycle-content h3 {
+  color: #e6c36a;
+  letter-spacing: 0.28em;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.cycle-content h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.cycle-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 620px;
+}
+
+/* animação */
+.cycle {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.cycle:nth-child(1) { animation-delay: 0.1s; }
+.cycle:nth-child(2) { animation-delay: 0.25s; }
+.cycle:nth-child(3) { animation-delay: 0.4s; }
+.cycle:nth-child(4) { animation-delay: 0.55s; }
+
+/* mobile */
+@media (max-width: 900px) {
+  .cycle {
+    grid-template-columns: 1fr;
+  }
+
+  .cycle-marker {
+    display: none;
+  }
+}

@@ -1,0 +1,85 @@
+/* =========================
+   CAMPO CÓSMICO ORGÂNICO
+========================= */
+
+.cosmic-dust {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Camada base — poeira distante */
+.cosmic-dust::before,
+.cosmic-dust::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background-repeat: repeat;
+  animation-timing-function: linear;
+}
+
+/* Poeira fina (muito subtil) */
+.cosmic-dust::before {
+  background-image:
+    radial-gradient(circle, rgba(230,195,106,0.18) 1px, transparent 1.6px);
+  background-size: 120px 140px;
+  animation: driftA 180s linear infinite;
+}
+
+/* Poeira média (ligeiramente mais visível) */
+.cosmic-dust::after {
+  background-image:
+    radial-gradient(circle, rgba(230,195,106,0.28) 1.2px, transparent 2px);
+  background-size: 90px 110px;
+  animation: driftB 240s linear infinite;
+}
+
+/* Partículas energéticas */
+.sparkles {
+  position: absolute;
+  inset: -50%;
+  background-image:
+    radial-gradient(circle, rgba(230,195,106,0.55) 1.4px, transparent 3px),
+    radial-gradient(circle, rgba(230,195,106,0.35) 1px, transparent 2.4px);
+  background-size:
+    160px 180px,
+    220px 260px;
+  animation: driftC 320s linear infinite;
+  opacity: 0.9;
+}
+
+/* =========================
+   MOVIMENTOS ORGÂNICOS
+========================= */
+
+@keyframes driftA {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-120px, -80px) rotate(360deg);
+  }
+}
+
+@keyframes driftB {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(160px, -140px) rotate(-360deg);
+  }
+}
+
+@keyframes driftC {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-180px, 120px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

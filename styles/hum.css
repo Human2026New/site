@@ -1,0 +1,271 @@
+/* =========================
+   BASE
+========================= */
+.hum-page {
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(230,195,106,0.04),
+      transparent 60%
+    ),
+    #0b0b0b;
+  color: #ffffff;
+  min-height: 100vh;
+  letter-spacing: 0.02em;
+}
+
+/* =========================
+   HERO
+========================= */
+.hum-hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+.hum-hero h1 {
+  font-size: 56px;
+  color: #e6c36a;
+  letter-spacing: 0.32em;
+  margin-bottom: 18px;
+  text-shadow:
+    0 0 18px rgba(230,195,106,0.35),
+    0 0 42px rgba(230,195,106,0.15);
+}
+
+.hum-hero p {
+  font-size: 14px;
+  opacity: 0.78;
+}
+
+/* =========================
+   BLOCOS (IMAGEM + TEXTO)
+========================= */
+.hum-block {
+  max-width: 960px;
+  margin: 56px auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* inverter ordem */
+.hum-block.reverse {
+  direction: rtl;
+}
+.hum-block.reverse > * {
+  direction: ltr;
+}
+
+/* =========================
+   IMAGEM
+========================= */
+.hum-image {
+  border: 1px solid rgba(230,195,106,0.18);
+  border-radius: 22px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(230,195,106,0.06),
+      transparent 70%
+    ),
+    rgba(255,255,255,0.01);
+  box-shadow:
+    inset 0 0 40px rgba(230,195,106,0.05),
+    0 0 60px rgba(0,0,0,0.6);
+}
+
+.hum-image img {
+  width: 200px;
+  height: auto;
+  filter:
+    drop-shadow(0 0 26px rgba(230,195,106,0.45))
+    drop-shadow(0 0 60px rgba(230,195,106,0.15));
+}
+
+/* =========================
+   TEXTO
+========================= */
+.hum-text h3 {
+  color: #e6c36a;
+  font-size: 12px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+.hum-text p {
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: 0.85;
+  margin-bottom: 12px;
+  max-width: 520px;
+}
+
+/* =========================
+   LIGAÇÃO HUMAN ↔ HUM ↔ APP
+========================= */
+.human-link {
+  padding: 72px 24px 96px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.human-link-title {
+  color: #e6c36a;
+  margin-bottom: 40px;
+  letter-spacing: 0.25em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.human-link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.human-link-card {
+  border: 1px solid rgba(230,195,106,0.18);
+  border-radius: 18px;
+  padding: 26px 22px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.015);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.human-link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 28px rgba(230,195,106,0.25);
+}
+
+.human-link-card h4 {
+  color: #e6c36a;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
+}
+
+.human-link-card p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.human-link-card span {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* =========================
+   ESPECIFICAÇÃO COMPLETA DA HUM
+========================= */
+.hum-spec {
+  max-width: 1100px;
+  margin: 88px auto 120px;
+  padding: 0 24px;
+}
+
+.hum-spec-title {
+  text-align: center;
+  color: #e6c36a;
+  letter-spacing: 0.3em;
+  font-size: 14px;
+  margin-bottom: 44px;
+}
+
+.hum-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.hum-spec-card {
+  border: 1px solid rgba(230,195,106,0.18);
+  border-radius: 16px;
+  padding: 22px 20px;
+  background: rgba(255,255,255,0.015);
+}
+
+.hum-spec-card h4 {
+  color: #e6c36a;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hum-spec-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.88;
+  margin-bottom: 8px;
+}
+
+.hum-spec-footer {
+  margin-top: 44px;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* =========================
+   ANIMAÇÃO SUAVE
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+  .hum-block {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin: 44px auto;
+  }
+
+  .hum-image img {
+    width: 170px;
+  }
+
+  .hum-hero h1 {
+    font-size: 42px;
+    letter-spacing: 0.28em;
+  }
+
+  .hum-text p {
+    max-width: 100%;
+  }
+
+  .human-link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hum-spec-grid {
+    grid-template-columns: 1fr;
+  }
+}
