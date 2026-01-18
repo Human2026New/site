@@ -2,18 +2,18 @@
   "name": "human-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://human2026new.github.io/site",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next build && next export",
-    "deploy": "gh-pages -d out",
-    "lint": "eslint ."
+    "export": "next build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
-    "lucide-react": "^0.562.0",
     "next": "16.1.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "lucide-react": "^0.562.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
